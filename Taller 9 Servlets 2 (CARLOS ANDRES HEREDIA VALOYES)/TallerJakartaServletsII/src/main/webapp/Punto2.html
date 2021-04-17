@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Hipotenisa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function myFunction() {
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value; 
+            	if(n1 == "" || n2 == ""){
+		alert("Debe introducir dos valores numericos");	
+                }else{
+                    if(!/^([0-9])*$/.test(n1) || !/^([0-9])*$/.test(n2)){
+                            alert("Los valores ingresados deben ser numericos");
+                    }else{
+                            document.getElementById("Env").submit();
+                    }
+                }
+            }
+        </script>
+            
+    </head>
+    <body>
+        <h1>Calculo de la Hipotenusa</h1>
+        <br><br><br>
+        <form id="Env" action="Hipotenusa" method="get">
+            <p>Numero Cateto 1: <input id="n1" type="number" name="num"> </p>
+            <br><br><br>
+            <p>Numero Cateto 2: <input id="n2" type="number" name="num2"> </p>
+            <br><br><br>
+            <input type="button" onclick="myFunction()" value="Enviar">
+        </form>
+    </body>
+</html>
+<!--CARLOS ANDRES HEREDIA VALOYES-->
